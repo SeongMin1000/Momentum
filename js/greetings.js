@@ -20,10 +20,10 @@ function paintGreeting(username){
 
 const savedUserName = localStorage.getItem(USERNAME_KEY)
 
-if(savedUserName === null){
+if(savedUserName === null){ // 유저 정보가 없으면 form 
     loginForm.classList.remove(HIDDEN_CLASSNAME)
     loginForm.addEventListener("submit", onLoginSubmit)
 }
-else{
-    paintGreeting(savedUserName)
+else{ // 있으면 인사
+    paintGreeting(savedUserName) 
 }
