@@ -5,6 +5,8 @@ const greeting = document.querySelector("#greeting")
 const HIDDEN_CLASSNAME = "hidden"
 const USERNAME_KEY = "username"
 
+const hour = new Date().getHours
+
 function onLoginSubmit(event){ // 브라우저 동작에 관한 정보 기록 인자 객체
     event.preventDefault() // form 제출 시 새로고침 방지(브라우저 기본 동작)
     loginForm.classList.add(HIDDEN_CLASSNAME) // 제출 뒤 form 숨기기
@@ -15,7 +17,15 @@ function onLoginSubmit(event){ // 브라우저 동작에 관한 정보 기록 �
 
 function paintGreeting(username){
     greeting.classList.remove(HIDDEN_CLASSNAME)
-    greeting.innerText = `Hello ${username}`;
+    if (hour >= 6 && hour < 12) {
+    greeting.innerText = `Good morning, ${username}`;
+    } else if (hour >= 12 && hour < 17) {
+    greeting.innerText = `Good afternoon, ${username}`;
+    } else if (hour >= 17 && hour < 20) {
+    greeting.innerText = `Good evening, ${username}`;
+    } else {
+    greeting.innerText = `Good night, ${username}`;
+    }
 }
 
 const savedUserName = localStorage.getItem(USERNAME_KEY)
