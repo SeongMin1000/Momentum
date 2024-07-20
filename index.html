@@ -11,8 +11,10 @@
 <body>
     <header>
         <div id="weather">
-            <span></span>
-            <span></span>
+            <div id="weather-text">
+                <span id="temp"></span>
+                <span id="city"></span>
+            </div>
         </div>
     </header>
     
@@ -20,14 +22,17 @@
         <h1 id="clock">00:00:00</h1>
         <form id="login-form" class="hidden">
             <input required maxlength="15" type="text" placeholder="What is your name?">
-            <button>Log In</button>
         </form>
         <h1 id="greeting" class="hidden"></h1>
+
+        <div id="todo">
+            <form id="todo-form">
+                <input type="text" placeholder="Write a To Do and Press Enter" required>
+            </form>
+            <ul id="todo-list"></ul>
+        </div>
+        
     </main>
-    <form id="todo-form">
-        <input type="text" placeholder="Write a To Do and Press Enter" required>
-    </form>
-    <ul id="todo-list"></ul>
 
     <footer>
         <div id="quote">
@@ -42,6 +47,7 @@
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
-    <script src="js/weather.js"></script>
+    <script type="module" src="js/weather.js"></script>
+    <script type="module" src="js/api_key.js"></script>
 </body>
 </html>

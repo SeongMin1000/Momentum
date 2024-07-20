@@ -3,13 +3,88 @@
     display: none;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
 body {
     color: white;
     font-family: "Gothic A1", sans-serif;
-    height: 100%;
+    text-align: center;
+    /* min-height: 100vh; 전체 화면 높이 */
 }
 
-img {
+header, footer {
+    height: 10vh;
+}
+
+main {
+    display: flex;          /* Flexbox 레이아웃 사용 */
+    flex-direction: column; /* 자식 요소들을 세로로 정렬 */
+    align-items: center;    /* 수평 중앙 정렬 */
+    height: 80vh;           /* 전체 높이의 80% */
+   
+}
+
+
+input {
+    border: none;
+}
+
+#weather {
+    display: flex; /* Flexbox 레이아웃 사용 */
+    justify-content: left; /* 수평 정렬 */
+    
+}
+
+#weather-text {
+    display: flex; /* Flexbox 레이아웃 사용 */
+    flex-direction: column; /* 세로로 정렬 */
+    font-weight: bold;
+    text-align: right;
+}
+
+#temp {
+    margin-top: 10px;
+}
+
+
+
+#weather-icon {
+    width: 55px;  /* 아이콘의 폭을 50픽셀로 설정 */
+    height: 55px; 
+}
+
+#clock {
+    font-size: 6rem;
+}
+
+#login-form input {
+    text-align: center;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    font-size: 2.5rem;
+    background-color: transparent;
+    color: #fff;
+}
+
+#login-form input::placeholder {
+    color: rgb(223, 223, 223);
+}
+
+#login-form input:focus {
+    outline: none;
+}
+
+#greeting {
+    margin: 10px;
+    font-size: 2.5rem;
+}
+
+#background-image {
     position: absolute;
     top: 0;
     left: 0;
@@ -17,4 +92,11 @@ img {
     height: 100%;
     object-fit: cover; /* 창 크기에 따라 이미지 조정 */
     z-index: -1; 
+}
+
+#quote {
+    font-style: italic;
+    display: flex;          /* Flexbox 레이아웃 사용 */
+    flex-direction: column; /* 자식 요소들을 세로로 정렬 */
+    align-items: center;
 }
