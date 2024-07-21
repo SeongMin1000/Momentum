@@ -1,0 +1,22 @@
+/* 날씨 설정 */
+#weather {
+    display: flex;
+    justify-content: left;
+    
+}
+
+#weather-text {
+    display: flex;
+    flex-direction: column; 
+    font-weight: bold;
+    text-align: right;
+}
+
+#temp {
+    margin-top: 10px;
+}
+
+#weather-icon {
+    width: 55px; 
+    height: 55px; 
+}

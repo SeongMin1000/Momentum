@@ -1,0 +1,10 @@
+/* 배경 설정 */
+#background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 창 크기에 따라 이미지 조정 */
+    z-index: -1; 
+}

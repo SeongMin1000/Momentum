@@ -1,0 +1,9 @@
+/* 명언 설정 */
+#quote {
+    font-style: italic;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    margin: 10px;
+    gap: 5px;
+}
