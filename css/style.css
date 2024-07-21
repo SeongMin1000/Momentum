@@ -15,7 +15,6 @@ body {
     color: white;
     font-family: "Gothic A1", sans-serif;
     text-align: center;
-    /* min-height: 100vh; 전체 화면 높이 */
 }
 
 header, footer {
@@ -26,8 +25,7 @@ main {
     display: flex;          /* Flexbox 레이아웃 사용 */
     flex-direction: column; /* 자식 요소들을 세로로 정렬 */
     align-items: center;    /* 수평 중앙 정렬 */
-    height: 80vh;           /* 전체 높이의 80% */
-   
+    height: 80vh;   
 }
 
 
@@ -35,15 +33,16 @@ input {
     border: none;
 }
 
+/* 날씨 설정 */
 #weather {
-    display: flex; /* Flexbox 레이아웃 사용 */
-    justify-content: left; /* 수평 정렬 */
+    display: flex;
+    justify-content: left;
     
 }
 
 #weather-text {
-    display: flex; /* Flexbox 레이아웃 사용 */
-    flex-direction: column; /* 세로로 정렬 */
+    display: flex;
+    flex-direction: column; 
     font-weight: bold;
     text-align: right;
 }
@@ -52,18 +51,20 @@ input {
     margin-top: 10px;
 }
 
-
-
 #weather-icon {
-    width: 55px;  /* 아이콘의 폭을 50픽셀로 설정 */
+    width: 55px; 
     height: 55px; 
 }
 
+/* 시계 설정 */
 #clock {
+    margin: 30px 0px 0px 0px;
     font-size: 6rem;
 }
 
+/* 로그인 및 인사 */
 #login-form input {
+    margin: 10px;
     text-align: center;
     border-bottom: 1px solid rgb(255, 255, 255);
     font-size: 2.5rem;
@@ -84,6 +85,37 @@ input {
     font-size: 2.5rem;
 }
 
+#todo {
+    margin-top: 2rem;
+    width: 100%;
+}
+
+#todo-form input {
+    width: 30rem;
+    height: 3rem;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.24);
+
+    color: white;
+    border-radius: 25px;
+    transition: all ease 1s;
+}
+
+#todo-form input:focus {
+    background-color: rgba(219, 219, 219, 0.2);
+    outline: none;
+}
+
+#todo-form input::placeholder {
+    color: rgba(255, 255, 255, 0.829);
+}
+
+#todo-form input:focus::placeholder {
+    color: rgb(255, 255, 255, 0.4);
+}
+
+/* 배경 설정 */
 #background-image {
     position: absolute;
     top: 0;
@@ -94,9 +126,12 @@ input {
     z-index: -1; 
 }
 
+/* 명언 설정 */
 #quote {
     font-style: italic;
-    display: flex;          /* Flexbox 레이아웃 사용 */
-    flex-direction: column; /* 자식 요소들을 세로로 정렬 */
+    display: flex;
+    flex-direction: column; 
     align-items: center;
+    margin: 10px;
+    gap: 5px;
 }
