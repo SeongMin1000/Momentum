@@ -11,7 +11,7 @@ const rename = document.querySelector("#rename")
 const HIDDEN_CLASSNAME = "hidden"
 const USERNAME_KEY = "username"
 
-const hour = new Date().getHours
+const hour = new Date().getHours()
 
 function onLoginSubmit(event){ // 브라우저 동작에 관한 정보 기록 인자 객체
     event.preventDefault() // form 제출 시 새로고침 방지(브라우저 기본 동작)

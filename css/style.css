@@ -22,6 +22,11 @@ header, footer {
     height: 8vh;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
 main {
     display: flex;          /* Flexbox 레이아웃 사용 */
     flex-direction: column; /* 자식 요소들을 세로로 정렬 */
@@ -29,6 +34,10 @@ main {
     height: 80vh;   
 }
 
+button {
+    background-color: transparent;
+    border: none;
+}
 
 input {
     border: none;

@@ -1,46 +1,84 @@
-#todo {
+.todo-container {
+    display: flex;
+    flex-direction: column; /* 수직 중앙 정렬 */
+    margin-top: 15px;
+}
+
+
+#todoBtn {
+    margin-left: 200px;
+    width: 100px;
+    color: white;    
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#todoBtn:hover {
+    color: rgba(255, 255, 255, 0.4)
+}
+
+.todo-popover {
+    z-index: 3; /* 다른 요소 위에 표시되도록 */
+    visibility: hidden; /* 기본적으로 숨겨짐 */
+    min-width: 320px;
+    min-height: 260px;
+    height: 260px;
+    width: 320px;
+    background-color: rgba(0,0,0,0.6);
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.one-list {
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    margin: 10px;
+}
+
+.listText {
+    margin-top: 5px;
+}
+
+.checkBox {
+    transform: scale(1.25);
+}
+
+#todoForm {
     width: 100%;
-    margin-top: 2rem;
-
 }
 
-#todo-form input {
-    width: 45%;
-    height: 3rem;
-    text-align: center;
-    font-size: 1.5rem;
-    background-color: rgba(255, 255, 255, 0.3);
-
+#newTodo {
+    margin-top: 10px;
+    padding-left: 3%;
+    width: 80%;
+    font-size: 15px;
+    background-color: transparent;
+    border-bottom: 1px solid white;
     color: white;
-    border-radius: 20px;
-    transition: all ease 1s;
+    height: 30px;
 }
 
-#todo-form input:focus {
-    background-color: rgba(219, 219, 219, 0.2);
+#newTodo::placeholder {
+    color: white;
+}
+
+#newTodo:focus {
     outline: none;
 }
 
-#todo-form input::placeholder {
-    color: white;
-}
-
-#todo-form input:focus::placeholder {
+#newTodo:focus::placeholder {
     color: rgb(255, 255, 255, 0.4);
 }
 
-#todo-list {
-    padding-left: 0;
-    font-size: 1.3rem;
-    margin: 0 auto;
-    width: 20rem;
-    max-height: 15rem;
-    overflow-y: scroll; /*영역 초과시 스크롤 */
-    text-align: left;
-    margin-top: 1rem;
+#todoList {
+    margin-top: 15px;
+    max-height: 190px;
+    overflow-y: scroll;
 }
 
-#todo-list::-webkit-scrollbar { /* 스크롤바 숨기기 */
-    border: none;
-    
+#todoList::-webkit-scrollbar{
+    display: none;
 }

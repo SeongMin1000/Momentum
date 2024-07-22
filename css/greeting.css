@@ -42,11 +42,10 @@
 }
 
 #dropdown-menu {
-    position:absolute;
     height: 70px;
     width: 140px;
     margin-left: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     display: flex;
     align-items: center; /* 수직 중앙 정렬 */
